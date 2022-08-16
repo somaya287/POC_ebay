@@ -1,0 +1,17 @@
+%EXTENDS test1.denodotest
+
+%EXECUTION[query] {ds : vdp}
+    SELECT seller, gearbox, count(seller) AS numberofdealers 
+    FROM bv_autos 
+    GROUP BY seller, gearbox 
+    HAVING seller = 'gewerblich'
+
+%RESULTS[data]
+seller,gearbox,numberofdealers
+gewerblich,manuell,2
+gewerblich,automatik,1
+
+%TRACE
+EXECUTION PLAN.numRows == 2
+%TRACE
+EXECUTION PLAN.GROUPBY PLAN.BASE PLAN.DF WRAPPER.LOCAL ROUTE.state == 'OK'

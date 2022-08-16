@@ -1,0 +1,20 @@
+%NAME bv_autos
+
+%DESCRIPTION This test verifies if the results of executing the base view
+    in vdp match those in the data source
+
+%CONTEXT
+name = 'A5_Sportback_2.7_Tdi'
+
+%EXECUTION[query] {ds:vdp}
+    SELECT name, seller, offertype, price, vehicletype, gearbox, model 
+    FROM bv_autos
+    WHERE name = ${name}
+
+%RESULTS[data]
+name,seller,offertype,price,vehicletype,gearbox,model
+A5_Sportback_2.7_Tdi,privat,Angebot,18300,coupe,manuell,
+
+
+%TRACE 
+EXECUTION PLAN.state == 'OK'

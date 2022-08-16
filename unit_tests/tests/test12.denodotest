@@ -1,0 +1,10 @@
+%EXTENDS test11.denodotest
+
+%EXECUTION[query] {ds : vdp}
+    SELECT datecrawled,yearofregistration,kilometer,notrepaireddamage,postalcode
+    FROM bv_autos 
+    WHERE seller = 'privat' and offertype = 'Angebot' and price = 1 and vehicletype = 'limousine' and model = 'e_klasse' and postalCode = 40589
+
+%RESULTS[data] {datepattern : yyyy-MM-d HH:mm:ss}
+datecrawled,yearofregistration,kilometer,notrepaireddamage,postalcode
+2016-03-28 09:37:01,1995,150000,nein,40589

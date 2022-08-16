@@ -1,0 +1,15 @@
+%EXTENDS test1.denodotest
+
+%CONTEXT
+name = 'Ford_Mustang_V8_390cui'
+
+%RESULTS[data]
+name,seller,offertype,price,vehicletype,gearbox,model
+Ford_Mustang_V8_390cui,privat,Angebot,25000,coupe,automatik,mustang
+
+%TRACE
+EXECUTION PLAN.numRows == 1
+%TRACE
+EXECUTION PLAN.PROJECTION PLAN.SELECTION PLAN.BASE PLAN.DF WRAPPER.LOCAL ROUTE.invalidTuples == 71
+%TRACE
+EXECUTION PLAN.PROJECTION PLAN.SELECTION PLAN.BASE PLAN.completed == 'true'
