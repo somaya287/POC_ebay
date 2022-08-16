@@ -8,4 +8,4 @@
 /databases/poc_ebay/folder.1 - connectivity/folder.1 - data sources/1 - data sources.vql
 /databases/poc_ebay/folder.1 - connectivity/folder.1 - data sources/datasources/df/ds_autos.vql
 /databases/poc_ebay/folder.1 - connectivity/folder.2 - base views/views/bv_autos.vql
-/databases/poc_ebay/folder.2 - integration/views/iv_autos_english.vql
+/databases/poc_ebay/folder.2 - integration/views/iv_autos_eng.vql

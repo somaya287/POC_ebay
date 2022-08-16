@@ -1,5 +1,0 @@
-﻿CREATE OR REPLACE VIEW iv_autos_english_significant_data FOLDER = '/2 - integration' AS SELECT iv_autos_english.datecrawled AS datecrawled, iv_autos_english.name AS name, iv_autos_english.seller_eng AS seller_eng, iv_autos_english.offertype_eng AS offertype_eng, iv_autos_english.price AS price, iv_autos_english.abtest AS abtest, iv_autos_english.vehicletype AS vehicletype, iv_autos_english.yearofregistration AS yearofregistration, iv_autos_english.gearbox_eng AS gearbox_eng, iv_autos_english.powerps AS powerps, iv_autos_english.model AS model, iv_autos_english.kilometer AS kilometer, iv_autos_english.monthofregistration AS monthofregistration, iv_autos_english.fueltype AS fueltype, iv_autos_english.brand AS brand, iv_autos_english.notrepaireddamage_eng AS notrepaireddamage_eng, iv_autos_english.datecreated AS datecreated, iv_autos_english.nrofpictures AS nrofpictures, iv_autos_english.postalcode AS postalcode, iv_autos_english.lastseenonline AS lastseenonline FROM iv_autos_english WHERE (yearofregistration >= 1863 AND yearofregistration <= 2022);
-
-ALTER VIEW iv_autos_english_significant_data
- LAYOUT (iv_autos_english = [85, 95, 200, 200]);
-
