@@ -1,0 +1,5 @@
+﻿CREATE OR REPLACE MAP simple offertype_all_eng (
+    'Angebot' = 'offer'
+    'Gesuch' = 'request'
+);
+

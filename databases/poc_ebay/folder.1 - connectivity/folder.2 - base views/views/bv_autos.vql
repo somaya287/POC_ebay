@@ -1,0 +1,80 @@
+﻿CREATE OR REPLACE WRAPPER DF ds_autos
+    FOLDER = '/1 - connectivity/2 - base views'
+    DATASOURCENAME=ds_autos
+    OUTPUTSCHEMA (
+        datecrawled = 'dateCrawled',
+        name = 'name',
+        seller = 'seller',
+        offertype = 'offerType',
+        price = 'price',
+        abtest = 'abtest',
+        vehicletype = 'vehicleType',
+        yearofregistration = 'yearOfRegistration',
+        gearbox = 'gearbox',
+        powerps = 'powerPS',
+        model = 'model',
+        kilometer = 'kilometer',
+        monthofregistration = 'monthOfRegistration',
+        fueltype = 'fuelType',
+        brand = 'brand',
+        notrepaireddamage = 'notRepairedDamage',
+        datecreated = 'dateCreated',
+        nrofpictures = 'nrOfPictures',
+        postalcode = 'postalCode',
+        lastseen = 'lastSeen'
+    );
+
+CREATE OR REPLACE TABLE bv_autos I18N us_pst (
+        datecrawled:text,
+        name:text,
+        seller:text,
+        offertype:text,
+        price:text,
+        abtest:text,
+        vehicletype:text,
+        yearofregistration:text,
+        gearbox:text,
+        powerps:text,
+        model:text,
+        kilometer:text,
+        monthofregistration:text,
+        fueltype:text,
+        brand:text,
+        notrepaireddamage:text,
+        datecreated:text,
+        nrofpictures:text,
+        postalcode:text,
+        lastseen:text
+    )
+    FOLDER = '/1 - connectivity/2 - base views'
+    CACHE OFF
+    TIMETOLIVEINCACHE DEFAULT
+    ADD SEARCHMETHOD ds_autos(
+        I18N us_pst
+        CONSTRAINTS (
+             ADD datecrawled NOS ZERO ()
+             ADD name NOS ZERO ()
+             ADD seller NOS ZERO ()
+             ADD offertype NOS ZERO ()
+             ADD price NOS ZERO ()
+             ADD abtest NOS ZERO ()
+             ADD vehicletype NOS ZERO ()
+             ADD yearofregistration NOS ZERO ()
+             ADD gearbox NOS ZERO ()
+             ADD powerps NOS ZERO ()
+             ADD model NOS ZERO ()
+             ADD kilometer NOS ZERO ()
+             ADD monthofregistration NOS ZERO ()
+             ADD fueltype NOS ZERO ()
+             ADD brand NOS ZERO ()
+             ADD notrepaireddamage NOS ZERO ()
+             ADD datecreated NOS ZERO ()
+             ADD nrofpictures NOS ZERO ()
+             ADD postalcode NOS ZERO ()
+             ADD lastseen NOS ZERO ()
+        )
+        OUTPUTLIST (abtest, brand, datecrawled, datecreated, fueltype, gearbox, kilometer, lastseen, model, monthofregistration, name, notrepaireddamage, nrofpictures, offertype, postalcode, powerps, price, seller, vehicletype, yearofregistration
+        )
+        WRAPPER (df ds_autos)
+    );
+

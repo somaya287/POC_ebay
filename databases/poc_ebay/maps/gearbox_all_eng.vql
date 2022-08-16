@@ -1,0 +1,5 @@
+﻿CREATE OR REPLACE MAP simple gearbox_all_eng (
+    'automatik' = 'automatic'
+    'manuell' = 'manual'
+);
+

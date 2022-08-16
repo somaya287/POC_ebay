@@ -1,0 +1,8 @@
+﻿# REQUIRES-PROPERTIES-FILE - # Do not remove this comment!
+CREATE OR REPLACE DATASOURCE DF ds_codes_postaux
+    FOLDER = '/1 - connectivity/1 - data sources'
+    ROUTE LOCAL 'LocalConnection' '${databases.poc_ebay.folder.1 - connectivity.folder.1 - data sources.datasources.df.ds_codes_postaux.ROUTE.LOCAL.PATH}' FILENAMEPATTERN = ''
+    COLUMNDELIMITER = ','
+    ENDOFLINEDELIMITER = '\n'
+    HEADER = TRUE;
+

@@ -1,0 +1,5 @@
+﻿CREATE OR REPLACE DATABASE poc_ebay 'Réalisation d''un logical data warehouse pour analyser les annonces du site Ebay des véhicules d''occasion sur le marché allemand.';
+
+ALTER DATABASE poc_ebay
+  CHARSET DEFAULT;
+

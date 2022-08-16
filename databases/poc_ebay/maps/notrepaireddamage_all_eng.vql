@@ -1,0 +1,5 @@
+﻿CREATE OR REPLACE MAP simple notrepaireddamage_all_eng (
+    'ja' = 'yes'
+    'nein' = 'no'
+);
+
