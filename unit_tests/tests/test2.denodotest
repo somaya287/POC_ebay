@@ -1,0 +1,18 @@
+%NAME ws_regions_bv_codes_postaux
+
+%DESCRIPTION This test verifies if the results coming from the deployed rest web service for a specific query
+    match data from the source 
+
+%CONTEXT
+password = #{password_ws_regions}
+
+%EXECUTION[ws] {user : admin , password : ${password}} 
+http://localhost:9090/server/poc_ebay/ws_regions/views/bv_codes_postaux?$select=state,city&$filter=(postalcode_0=%2701968%27)
+    
+
+%RESULTS[data]
+state,city
+Brandenburg,Oberspreewald-Lausitz
+
+
+

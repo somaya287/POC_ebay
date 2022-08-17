@@ -1,0 +1,17 @@
+%NAME ws_annonces_regions_iv_join
+
+%DESCRIPTION This test verifies if the rest ws is deployed and the results coming from it
+    match data in vdp 
+
+%CONTEXT
+password = #{password_ws_annonces_regions}
+
+%EXECUTION[ws] {user : admin , password : ${password}} 
+http://localhost:9090/server/poc_ebay/ws_annonces_regions/views/iv_join_codes_postaux_autos?state=Mecklenburg-Vorpommern&$select=name,price_decimal,vehicletype,powerps_nb,model,fueltype,brand,postalcode,placename,stateabbreviation,city&$orderby=price_decimal%20DESC
+
+%RESULTS[query] {ds : vdp , ordered : true} 
+    SELECT name, price_decimal, vehicletype, powerps_nb, model, fueltype,brand,postalcode,placename,stateabbreviation,city
+    FROM iv_join_codes_postaux_autos
+    WHERE state = 'Mecklenburg-Vorpommern'
+    ORDER BY price_decimal DESC
+    FETCH FIRST 25 ROWS ONLY

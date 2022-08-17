@@ -1,0 +1,17 @@
+%EXTENDS test2.denodotest
+
+%NAME ws_regions_csvfile
+
+%DESCRIPTION This test verifies if the rest ws is deployed and the results coming from it
+    match data in a csv file downloaded from vdp base view execution panel 
+
+%CONTEXT
+password = #{password_ws_regions}
+path = #{path}
+
+%EXECUTION[ws] {user : admin , password : ${password}} 
+http://localhost:9090/server/poc_ebay/ws_regions/views/bv_codes_postaux?$start_index=0&$count=150
+
+%RESULTS[csv] { type : full }
+file:${path} 
+

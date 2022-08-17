@@ -1,4 +1,4 @@
-%NAME bv_autos
+%NAME bv_autos_vdp_data
 
 %DESCRIPTION This test verifies if the results of executing the base view
     in vdp match those in the data source
@@ -6,7 +6,7 @@
 %CONTEXT
 name = 'A5_Sportback_2.7_Tdi'
 
-%EXECUTION[query] {ds:vdp}
+%EXECUTION[query] {ds : vdp}
     SELECT name, seller, offertype, price, vehicletype, gearbox, model 
     FROM bv_autos
     WHERE name = ${name}
