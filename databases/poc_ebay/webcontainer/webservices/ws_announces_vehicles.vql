@@ -1,0 +1,4 @@
+﻿UNDEPLOY IF EXISTS WEBSERVICE ws_announces_vehicles;
+
+DEPLOY WEBSERVICE ws_announces_vehicles;
+

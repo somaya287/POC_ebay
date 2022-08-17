@@ -1,0 +1,50 @@
+﻿CREATE OR REPLACE REST WEBSERVICE ws_annonces_regions
+    CONNECTION (
+        CHUNKSIZE = 1000
+        CHUNKTIMEOUT = 1000
+        QUERYTIMEOUT = 100000
+        POOLENABLED = true
+        POOLINITSIZE = 0
+        POOLMAXACTIVE = 30
+    )
+    DEFAULTREPRESENTATION = HTML
+    SUPPORTEDREPRESENTATIONS (HTML, XML, JSON)    AUTHENTICATION (BASIC VDP
+    VDPACCEPTEDUSERS 'admin'
+ )
+
+    RESOURCES (
+        VIEW iv_join_codes_postaux_autos FIELDS (
+            datecrawled : 'text', 
+            name : 'text', 
+            seller_eng : 'text', 
+            offertype_eng : 'text', 
+            price_decimal : 'decimal', 
+            abtest : 'text', 
+            vehicletype : 'text', 
+            yearofregistration : 'text', 
+            gearbox_eng : 'text', 
+            powerps_nb : 'int', 
+            model : 'text', 
+            kilometer : 'text', 
+            monthofregistration : 'text', 
+            fueltype : 'text', 
+            brand : 'text', 
+            notrepaireddamage_eng : 'text', 
+            datecreated : 'text', 
+            nrofpictures : 'text', 
+            lastseenonline : 'text', 
+            postalcode : 'text', 
+            placename : 'text', 
+            state : 'text', 
+            stateabbreviation : 'text', 
+            city : 'text', 
+            latitude : 'text', 
+            longitude : 'text'
+        )
+    )
+    OPTIONS ( NULLVALUESASEMPTYXMLELEMENTS = false
+        ALLOW_CORS_ORIGINS (*) DISABLED
+        PROCESS_FUNCTIONS_IN_SELECT_PARAMETER = true ) 
+    OPENAPI2 ( API_VERSION = '1.0.0' ) 
+    FOLDER = '/5 - data services/1 - rest web services';
+

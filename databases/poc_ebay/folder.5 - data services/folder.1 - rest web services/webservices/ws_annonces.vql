@@ -1,0 +1,88 @@
+﻿CREATE OR REPLACE REST WEBSERVICE ws_annonces
+    CONNECTION (
+        CHUNKSIZE = 1000
+        CHUNKTIMEOUT = 1000
+        QUERYTIMEOUT = 100000
+        POOLENABLED = true
+        POOLINITSIZE = 0
+        POOLMAXACTIVE = 30
+    )
+    DEFAULTREPRESENTATION = HTML
+    SUPPORTEDREPRESENTATIONS (HTML, XML, JSON)    AUTHENTICATION (BASIC VDP
+    VDPACCEPTEDUSERS 'admin'
+ )
+
+    RESOURCES (
+        VIEW bv_autos FIELDS (
+            datecrawled : 'text', 
+            name : 'text', 
+            seller : 'text', 
+            offertype : 'text', 
+            price : 'text', 
+            abtest : 'text', 
+            vehicletype : 'text', 
+            yearofregistration : 'text', 
+            gearbox : 'text', 
+            powerps : 'text', 
+            model : 'text', 
+            kilometer : 'text', 
+            monthofregistration : 'text', 
+            fueltype : 'text', 
+            brand : 'text', 
+            notrepaireddamage : 'text', 
+            datecreated : 'text', 
+            nrofpictures : 'text', 
+            postalcode : 'text', 
+            lastseen : 'text'
+        ),
+        VIEW iv_autos_eng FIELDS (
+            datecrawled : 'text', 
+            name : 'text', 
+            seller_eng : 'text', 
+            offertype_eng : 'text', 
+            price_decimal : 'decimal', 
+            abtest : 'text', 
+            vehicletype : 'text', 
+            yearofregistration : 'text', 
+            gearbox_eng : 'text', 
+            powerps_nb : 'int', 
+            model : 'text', 
+            kilometer : 'text', 
+            monthofregistration : 'text', 
+            fueltype : 'text', 
+            brand : 'text', 
+            notrepaireddamage_eng : 'text', 
+            datecreated : 'text', 
+            nrofpictures : 'text', 
+            postalcode : 'text', 
+            lastseenonline : 'text'
+        ),
+        VIEW iv_autos_eng_significantdata FIELDS (
+            datecrawled : 'text', 
+            name : 'text', 
+            seller_eng : 'text', 
+            offertype_eng : 'text', 
+            price_decimal : 'decimal', 
+            abtest : 'text', 
+            vehicletype : 'text', 
+            yearofregistration : 'text', 
+            gearbox_eng : 'text', 
+            powerps_nb : 'int', 
+            model : 'text', 
+            kilometer : 'text', 
+            monthofregistration : 'text', 
+            fueltype : 'text', 
+            brand : 'text', 
+            notrepaireddamage_eng : 'text', 
+            datecreated : 'text', 
+            nrofpictures : 'text', 
+            postalcode : 'text', 
+            lastseenonline : 'text'
+        )
+    )
+    OPTIONS ( NULLVALUESASEMPTYXMLELEMENTS = false
+        ALLOW_CORS_ORIGINS (*) DISABLED
+        PROCESS_FUNCTIONS_IN_SELECT_PARAMETER = true ) 
+    OPENAPI2 ( API_VERSION = '1.0.0' ) 
+    FOLDER = '/5 - data services/1 - rest web services';
+

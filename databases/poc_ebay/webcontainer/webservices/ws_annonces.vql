@@ -1,0 +1,4 @@
+﻿UNDEPLOY IF EXISTS WEBSERVICE ws_annonces;
+
+DEPLOY WEBSERVICE ws_annonces;
+

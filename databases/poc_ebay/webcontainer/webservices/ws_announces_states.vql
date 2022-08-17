@@ -1,0 +1,4 @@
+﻿UNDEPLOY IF EXISTS WEBSERVICE ws_announces_states;
+
+DEPLOY WEBSERVICE ws_announces_states;
+

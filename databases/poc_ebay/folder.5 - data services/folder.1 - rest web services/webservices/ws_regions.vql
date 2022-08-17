@@ -1,0 +1,41 @@
+﻿CREATE OR REPLACE REST WEBSERVICE ws_regions
+    CONNECTION (
+        CHUNKSIZE = 1000
+        CHUNKTIMEOUT = 1000
+        QUERYTIMEOUT = 100000
+        POOLENABLED = true
+        POOLINITSIZE = 0
+        POOLMAXACTIVE = 30
+    )
+    DEFAULTREPRESENTATION = HTML
+    SUPPORTEDREPRESENTATIONS (HTML, XML, JSON)    AUTHENTICATION (BASIC VDP
+    VDPACCEPTEDUSERS 'admin'
+ )
+
+    RESOURCES (
+        VIEW bv_codes_postaux FIELDS (
+            postalcode_0 : 'text', 
+            placename_0 : 'text', 
+            state : 'text', 
+            stateabbreviation_0 : 'text', 
+            city : 'text', 
+            latitude : 'text', 
+            longitude : 'text', 
+            id_0 : 'text'
+        ),
+        VIEW iv_codes_postaux FIELDS (
+            postalcode : 'text', 
+            placename : 'text', 
+            state : 'text', 
+            stateabbreviation : 'text', 
+            city : 'text', 
+            latitude : 'text', 
+            longitude : 'text'
+        )
+    )
+    OPTIONS ( NULLVALUESASEMPTYXMLELEMENTS = false
+        ALLOW_CORS_ORIGINS (*) DISABLED
+        PROCESS_FUNCTIONS_IN_SELECT_PARAMETER = true ) 
+    OPENAPI2 ( API_VERSION = '1.0.0' ) 
+    FOLDER = '/5 - data services/1 - rest web services';
+
