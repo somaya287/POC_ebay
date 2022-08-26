@@ -1,0 +1,9 @@
+﻿CREATE OR REPLACE ASSOCIATION a_dates_fact REFERENTIAL CONSTRAINT 
+FOLDER = '/6 - associations'
+    ENDPOINT factannounce dates (1)
+    ENDPOINT dates factannounce PRINCIPAL (0,1)
+    ADD MAPPING dates_key=dates_key;
+
+ALTER ASSOCIATION a_dates_fact
+ LAYOUT (dates = [112, 98, 200, 200], factannounce = [345, 43, 200, 200]);
+

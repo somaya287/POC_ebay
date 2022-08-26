@@ -1,0 +1,5 @@
+﻿CREATE OR REPLACE VIEW iv_03_codes_postaux FOLDER = '/2 - integration' DESCRIPTION = 'Change names of fields, delete empty rows '  AS SELECT bv_codes_postaux.postalcode_0 AS postalcode, bv_codes_postaux.placename_0 AS placename, bv_codes_postaux.state AS state, bv_codes_postaux.stateabbreviation_0 AS stateabbreviation, bv_codes_postaux.city AS city, bv_codes_postaux.latitude AS latitude, bv_codes_postaux.longitude AS longitude FROM bv_codes_postaux WHERE postalcode_0 <> '' CONTEXT ('I18N' = 'us_pst');
+
+ALTER VIEW iv_03_codes_postaux
+ LAYOUT (bv_codes_postaux = [20, 20, 200, 200]);
+

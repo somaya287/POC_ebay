@@ -1,0 +1,5 @@
+﻿CREATE OR REPLACE VIEW iv_05_dates_distinct_rows FOLDER = '/2 - integration' AS SELECT DISTINCT iv_04_join_codes_postaux_autos.datecrawled AS datecrawled, iv_04_join_codes_postaux_autos.datecreated AS datecreated, iv_04_join_codes_postaux_autos.lastseenonline AS lastseenonline FROM iv_04_join_codes_postaux_autos;
+
+ALTER VIEW iv_05_dates_distinct_rows
+ LAYOUT (iv_04_join_codes_postaux_autos = [20, 20, 249, 545]);
+

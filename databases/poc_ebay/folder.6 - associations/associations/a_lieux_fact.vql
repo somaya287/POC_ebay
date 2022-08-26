@@ -1,0 +1,9 @@
+﻿CREATE OR REPLACE ASSOCIATION a_lieux_fact REFERENTIAL CONSTRAINT 
+FOLDER = '/6 - associations'
+    ENDPOINT factannounce lieux (1)
+    ENDPOINT lieux factannounce PRINCIPAL (1)
+    ADD MAPPING postalcode=postalcode;
+
+ALTER ASSOCIATION a_lieux_fact
+ LAYOUT (lieux = [126, 77, 200, 200], factannounce = [359, 50, 200, 200]);
+

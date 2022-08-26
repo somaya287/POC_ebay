@@ -1,0 +1,9 @@
+﻿CREATE OR REPLACE ASSOCIATION a_announcer_fact REFERENTIAL CONSTRAINT 
+FOLDER = '/6 - associations'
+    ENDPOINT fact_announce announcer PRINCIPAL (1)
+    ENDPOINT announcer factannounce (1)
+    ADD MAPPING announcer_key=announcer_key;
+
+ALTER ASSOCIATION a_announcer_fact
+ LAYOUT (announcer = [119, 89, 200, 200], factannounce = [477, 45, 200, 200]);
+

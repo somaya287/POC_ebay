@@ -23,7 +23,7 @@
             longitude : 'text', 
             id_0 : 'text'
         ),
-        VIEW iv_codes_postaux FIELDS (
+        VIEW iv_03_codes_postaux FIELDS (
             postalcode : 'text', 
             placename : 'text', 
             state : 'text', 

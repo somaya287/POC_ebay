@@ -1,0 +1,6 @@
+﻿CREATE OR REPLACE VIEW offer FOLDER = '/3 - business entities'
+    PRIMARY KEY ( 'offer_key' ) AS SELECT rownum() AS offer_key, iv_05_offers_distinct_rows.name AS name, iv_05_offers_distinct_rows.offertype_eng AS offertype_eng, iv_05_offers_distinct_rows.nrofpictures AS nrofpictures, iv_05_offers_distinct_rows.abtest AS abtest FROM iv_05_offers_distinct_rows CONTEXT ('I18N' = 'us_pst');
+
+ALTER VIEW offer
+ LAYOUT (iv_05_offers_distinct_rows = [20, 20, 200, 200]);
+

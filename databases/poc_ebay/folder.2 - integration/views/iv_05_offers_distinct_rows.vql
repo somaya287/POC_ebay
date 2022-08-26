@@ -1,0 +1,5 @@
+﻿CREATE OR REPLACE VIEW iv_05_offers_distinct_rows FOLDER = '/2 - integration' AS SELECT DISTINCT iv_04_join_codes_postaux_autos.name AS name, iv_04_join_codes_postaux_autos.offertype_eng AS offertype_eng, iv_04_join_codes_postaux_autos.nrofpictures AS nrofpictures, iv_04_join_codes_postaux_autos.abtest AS abtest FROM iv_04_join_codes_postaux_autos CONTEXT ('I18N' = 'us_pst');
+
+ALTER VIEW iv_05_offers_distinct_rows
+ LAYOUT (iv_04_join_codes_postaux_autos = [132, 136, 200, 200]);
+

@@ -1,0 +1,5 @@
+﻿CREATE OR REPLACE VIEW iv_05_vehicles_distinct_rows FOLDER = '/2 - integration' AS SELECT DISTINCT iv_04_join_codes_postaux_autos.vehicletype AS vehicletype, iv_04_join_codes_postaux_autos.model AS model, iv_04_join_codes_postaux_autos.brand AS brand, iv_04_join_codes_postaux_autos.fueltype AS fueltype, iv_04_join_codes_postaux_autos.gearbox_eng AS gearbox_eng, iv_04_join_codes_postaux_autos.powerps_nb AS powerps_nb, iv_04_join_codes_postaux_autos.yearofregistration AS yearofregistration, iv_04_join_codes_postaux_autos.monthofregistration AS monthofregistration, iv_04_join_codes_postaux_autos.kilometer AS kilometer, iv_04_join_codes_postaux_autos.notrepaireddamage_eng AS notrepaireddamage_eng FROM iv_04_join_codes_postaux_autos CONTEXT ('I18N' = 'us_pst');
+
+ALTER VIEW iv_05_vehicles_distinct_rows
+ LAYOUT (iv_04_join_codes_postaux_autos = [89, 158, 200, 200]);
+

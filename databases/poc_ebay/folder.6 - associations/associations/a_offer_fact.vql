@@ -1,0 +1,9 @@
+﻿CREATE OR REPLACE ASSOCIATION a_offer_fact REFERENTIAL CONSTRAINT 
+FOLDER = '/6 - associations'
+    ENDPOINT factannounce offer (1)
+    ENDPOINT offer factannounce PRINCIPAL (1)
+    ADD MAPPING offer_key=offer_key;
+
+ALTER ASSOCIATION a_offer_fact
+ LAYOUT (offer = [163, 167, 200, 200], factannounce = [448, 38, 200, 200]);
+

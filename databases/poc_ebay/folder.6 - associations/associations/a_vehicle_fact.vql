@@ -1,0 +1,9 @@
+﻿CREATE OR REPLACE ASSOCIATION a_vehicle_fact REFERENTIAL CONSTRAINT 
+FOLDER = '/6 - associations'
+    ENDPOINT factannounce vehicle (1)
+    ENDPOINT vehicle factannounce PRINCIPAL (1)
+    ADD MAPPING vehicle_key=vehicle_key;
+
+ALTER ASSOCIATION a_vehicle_fact
+ LAYOUT (vehicle = [171, 114, 200, 200], factannounce = [463, 66, 200, 200]);
+

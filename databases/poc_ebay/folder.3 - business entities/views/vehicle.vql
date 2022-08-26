@@ -1,0 +1,6 @@
+﻿CREATE OR REPLACE VIEW vehicle FOLDER = '/3 - business entities'
+    PRIMARY KEY ( 'vehicle_key' ) AS SELECT rownum() AS vehicle_key, iv_05_vehicles_distinct_rows.vehicletype AS vehicletype, iv_05_vehicles_distinct_rows.model AS model, iv_05_vehicles_distinct_rows.brand AS brand, iv_05_vehicles_distinct_rows.fueltype AS fueltype, iv_05_vehicles_distinct_rows.gearbox_eng AS gearbox_eng, iv_05_vehicles_distinct_rows.powerps_nb AS powerps_nb, iv_05_vehicles_distinct_rows.yearofregistration AS yearofregistration, iv_05_vehicles_distinct_rows.monthofregistration AS monthofregistration, iv_05_vehicles_distinct_rows.kilometer AS kilometer, iv_05_vehicles_distinct_rows.notrepaireddamage_eng AS notrepaireddamage_eng FROM iv_05_vehicles_distinct_rows CONTEXT ('I18N' = 'us_pst');
+
+ALTER VIEW vehicle
+ LAYOUT (iv_05_vehicles_distinct_rows = [20, 20, 200, 200]);
+

@@ -13,7 +13,7 @@
  )
 
     RESOURCES (
-        VIEW iv_join_codes_postaux_autos FIELDS (
+        VIEW iv_04_join_codes_postaux_autos FIELDS (
             datecrawled : 'text', 
             name : 'text', 
             seller_eng : 'text', 

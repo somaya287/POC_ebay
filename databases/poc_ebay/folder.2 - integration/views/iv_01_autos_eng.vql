@@ -1,0 +1,5 @@
+﻿CREATE OR REPLACE VIEW iv_01_autos_eng FOLDER = '/2 - integration' DESCRIPTION = 'Change some German words to English, cast some text types to number and decimal '  AS SELECT DISTINCT bv_autos.datecrawled AS datecrawled, bv_autos.name AS name, replacemap(bv_autos.seller, 'seller_all_eng') AS seller_eng, replacemap(bv_autos.offertype, 'offertype_all_eng') AS offertype_eng, cast('decimal', bv_autos.price) AS price_decimal, bv_autos.abtest AS abtest, bv_autos.vehicletype AS vehicletype, bv_autos.yearofregistration AS yearofregistration, replacemap(bv_autos.gearbox, 'gearbox_all_eng') AS gearbox_eng, cast('int', bv_autos.powerps) AS powerps_nb, bv_autos.model AS model, bv_autos.kilometer AS kilometer, bv_autos.monthofregistration AS monthofregistration, bv_autos.fueltype AS fueltype, bv_autos.brand AS brand, replacemap(bv_autos.notrepaireddamage, 'notrepaireddamage_all_eng') AS notrepaireddamage_eng, bv_autos.datecreated AS datecreated, bv_autos.nrofpictures AS nrofpictures, bv_autos.postalcode AS postalcode, bv_autos.lastseen AS lastseenonline FROM bv_autos CONTEXT ('I18N' = 'us_pst');
+
+ALTER VIEW iv_01_autos_eng
+ LAYOUT (bv_autos = [20, 20, 200, 200]);
+

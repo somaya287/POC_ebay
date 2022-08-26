@@ -19,8 +19,8 @@
         ( STYLE DOCUMENT )
     OPERATION 'getannonces_by_vehicle' (
         TYPE SELECT
-        SCHEMA VIEW iv_join_codes_postaux_autos
-        VQL = 'SELECT datecrawled, name, seller_eng, offertype_eng, price_decimal, abtest, vehicletype, yearofregistration, gearbox_eng, powerps_nb, model, kilometer, monthofregistration, fueltype, brand, notrepaireddamage_eng, datecreated, nrofpictures, lastseenonline, postalcode, placename, state, stateabbreviation, city, latitude, longitude FROM iv_join_codes_postaux_autos ^ExecuteIfIsNotNull("WHERE ",@WHEREEXPRESSION,"") CONTEXT (''i18n'' = ''us_pst''^ExecuteIfIsNotNull(", ",@VERBOSEERRORS,"")^ExecuteIfIsNotNull(", ",@CONTEXTEXPRESSION,""))'
+        SCHEMA VIEW iv_04_join_codes_postaux_autos
+        VQL = 'SELECT datecrawled, name, seller_eng, offertype_eng, price_decimal, abtest, vehicletype, yearofregistration, gearbox_eng, powerps_nb, model, kilometer, monthofregistration, fueltype, brand, notrepaireddamage_eng, datecreated, nrofpictures, lastseenonline, postalcode, placename, state, stateabbreviation, city, latitude, longitude FROM poc_ebay.iv_04_join_codes_postaux_autos ^ExecuteIfIsNotNull("WHERE ",@WHEREEXPRESSION,"") CONTEXT (''i18n'' = ''us_pst''^ExecuteIfIsNotNull(", ",@VERBOSEERRORS,"")^ExecuteIfIsNotNull(", ",@CONTEXTEXPRESSION,""))'
         INPUTS 'getannonces_by_vehicle' (
             'PRICE_DECIMAL' price_decimal:'decimal' '=' 
             'VEHICLETYPE' vehicletype:'text' '=' 

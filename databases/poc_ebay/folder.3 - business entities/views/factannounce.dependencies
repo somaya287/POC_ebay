@@ -1,10 +1,9 @@
-﻿/databases/poc_ebay/folder.5 - data services/5 - data services.vql
-/databases/poc_ebay/folder.5 - data services/folder.1 - rest web services/1 - rest web services.vql
-/databases/poc_ebay/folder.2 - integration/2 - integration.vql
+﻿/databases/poc_ebay/folder.3 - business entities/3 - business entities.vql
 /databases/poc_ebay/maps/seller_all_eng.vql
 /databases/poc_ebay/maps/offertype_all_eng.vql
 /databases/poc_ebay/maps/gearbox_all_eng.vql
 /databases/poc_ebay/maps/notrepaireddamage_all_eng.vql
+/databases/poc_ebay/folder.2 - integration/2 - integration.vql
 /databases/poc_ebay/folder.1 - connectivity/1 - connectivity.vql
 /databases/poc_ebay/folder.1 - connectivity/folder.2 - base views/2 - base views.vql
 /databases/poc_ebay/folder.1 - connectivity/folder.1 - data sources/1 - data sources.vql
@@ -16,3 +15,12 @@
 /databases/poc_ebay/folder.1 - connectivity/folder.2 - base views/views/bv_codes_postaux.vql
 /databases/poc_ebay/folder.2 - integration/views/iv_03_codes_postaux.vql
 /databases/poc_ebay/folder.2 - integration/views/iv_04_join_codes_postaux_autos.vql
+/databases/poc_ebay/folder.2 - integration/views/iv_05_offers_distinct_rows.vql
+/databases/poc_ebay/folder.3 - business entities/views/offer.vql
+/databases/poc_ebay/folder.2 - integration/views/iv_05_vehicles_distinct_rows.vql
+/databases/poc_ebay/folder.3 - business entities/views/vehicle.vql
+/databases/poc_ebay/folder.2 - integration/views/iv_05_announcers_distinct_rows.vql
+/databases/poc_ebay/folder.3 - business entities/views/announcer.vql
+/databases/poc_ebay/folder.3 - business entities/views/lieux.vql
+/databases/poc_ebay/folder.2 - integration/views/iv_05_dates_distinct_rows.vql
+/databases/poc_ebay/folder.3 - business entities/views/dates.vql

@@ -1,0 +1,6 @@
+﻿CREATE OR REPLACE VIEW announcer FOLDER = '/3 - business entities'
+    PRIMARY KEY ( 'announcer_key' ) AS SELECT rownum() AS announcer_key, iv_05_announcers_distinct_rows.seller_eng AS seller_eng FROM iv_05_announcers_distinct_rows CONTEXT ('I18N' = 'us_pst');
+
+ALTER VIEW announcer
+ LAYOUT (iv_05_announcers_distinct_rows = [20, 20, 200, 200]);
+

@@ -35,7 +35,7 @@
             postalcode : 'text', 
             lastseen : 'text'
         ),
-        VIEW iv_autos_eng FIELDS (
+        VIEW iv_01_autos_eng FIELDS (
             datecrawled : 'text', 
             name : 'text', 
             seller_eng : 'text', 
@@ -57,7 +57,7 @@
             postalcode : 'text', 
             lastseenonline : 'text'
         ),
-        VIEW iv_autos_eng_significantdata FIELDS (
+        VIEW iv_02_autos_eng_significantdata FIELDS (
             datecrawled : 'text', 
             name : 'text', 
             seller_eng : 'text', 

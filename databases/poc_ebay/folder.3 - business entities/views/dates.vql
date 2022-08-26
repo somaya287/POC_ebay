@@ -1,0 +1,6 @@
+﻿CREATE OR REPLACE VIEW dates FOLDER = '/3 - business entities'
+    PRIMARY KEY ( 'dates_key' ) AS SELECT rownum() AS dates_key, iv_05_dates_distinct_rows.datecrawled AS datecrawled, iv_05_dates_distinct_rows.datecreated AS datecreated, iv_05_dates_distinct_rows.lastseenonline AS lastseenonline FROM iv_05_dates_distinct_rows;
+
+ALTER VIEW dates
+ LAYOUT (iv_05_dates_distinct_rows = [20, 20, 200, 85]);
+
