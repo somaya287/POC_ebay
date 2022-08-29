@@ -36,7 +36,7 @@
             lastseen : 'text'
         ),
         VIEW iv_01_autos_eng FIELDS (
-            datecrawled : 'text', 
+            datecrawled : 'timestamp', 
             name : 'text', 
             seller_eng : 'text', 
             offertype_eng : 'text', 
@@ -47,18 +47,18 @@
             gearbox_eng : 'text', 
             powerps_nb : 'int', 
             model : 'text', 
-            kilometer : 'text', 
+            kilometer : 'int', 
             monthofregistration : 'text', 
             fueltype : 'text', 
             brand : 'text', 
             notrepaireddamage_eng : 'text', 
-            datecreated : 'text', 
+            datecreated : 'timestamp', 
             nrofpictures : 'text', 
             postalcode : 'text', 
-            lastseenonline : 'text'
+            lastseenonline : 'timestamp'
         ),
         VIEW iv_02_autos_eng_significantdata FIELDS (
-            datecrawled : 'text', 
+            datecrawled : 'timestamp', 
             name : 'text', 
             seller_eng : 'text', 
             offertype_eng : 'text', 
@@ -69,15 +69,15 @@
             gearbox_eng : 'text', 
             powerps_nb : 'int', 
             model : 'text', 
-            kilometer : 'text', 
+            kilometer : 'int', 
             monthofregistration : 'text', 
             fueltype : 'text', 
             brand : 'text', 
             notrepaireddamage_eng : 'text', 
-            datecreated : 'text', 
+            datecreated : 'timestamp', 
             nrofpictures : 'text', 
             postalcode : 'text', 
-            lastseenonline : 'text'
+            lastseenonline : 'timestamp'
         )
     )
     OPTIONS ( NULLVALUESASEMPTYXMLELEMENTS = false

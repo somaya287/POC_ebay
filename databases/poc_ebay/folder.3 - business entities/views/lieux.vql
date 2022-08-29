@@ -1,6 +1,6 @@
 ﻿CREATE OR REPLACE VIEW lieux FOLDER = '/3 - business entities'
-    PRIMARY KEY ( 'postalcode' ) AS SELECT iv_03_codes_postaux.postalcode AS postalcode, iv_03_codes_postaux.placename AS placename, iv_03_codes_postaux.state AS state, iv_03_codes_postaux.stateabbreviation AS stateabbreviation, iv_03_codes_postaux.city AS city, iv_03_codes_postaux.latitude AS latitude, iv_03_codes_postaux.longitude AS longitude FROM iv_03_codes_postaux CONTEXT ('I18N' = 'us_pst');
+    PRIMARY KEY ( 'postalcode' ) AS SELECT DISTINCT iv_04_join_codes_postaux_autos.postalcode AS postalcode, iv_04_join_codes_postaux_autos.placename AS placename, iv_04_join_codes_postaux_autos.state AS state, iv_04_join_codes_postaux_autos.stateabbreviation AS stateabbreviation, iv_04_join_codes_postaux_autos.city AS city, iv_04_join_codes_postaux_autos.latitude AS latitude, iv_04_join_codes_postaux_autos.longitude AS longitude FROM iv_04_join_codes_postaux_autos CONTEXT ('I18N' = 'us_pst');
 
 ALTER VIEW lieux
- LAYOUT (iv_03_codes_postaux = [157, 125, 200, 200]);
+ LAYOUT (iv_04_join_codes_postaux_autos = [20, 20, 264, 545]);
 

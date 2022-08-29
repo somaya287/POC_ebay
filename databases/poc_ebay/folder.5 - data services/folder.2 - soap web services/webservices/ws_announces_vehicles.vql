@@ -32,7 +32,7 @@
         )
         OUTPUT 
             'IV_JOIN_CODES_POSTAUX_AUTOSReturn': Array of ( 'IV_JOIN_CODES_POSTAUX_AUTOSReturnRow': Register of (
-                datecrawled : 'text',
+                datecrawled : 'timestamp',
                 name : 'text',
                 seller_eng : 'text',
                 offertype_eng : 'text',
@@ -43,14 +43,14 @@
                 gearbox_eng : 'text',
                 powerps_nb : 'int',
                 model : 'text',
-                kilometer : 'text',
+                kilometer : 'int',
                 monthofregistration : 'text',
                 fueltype : 'text',
                 brand : 'text',
                 notrepaireddamage_eng : 'text',
-                datecreated : 'text',
+                datecreated : 'timestamp',
                 nrofpictures : 'text',
-                lastseenonline : 'text',
+                lastseenonline : 'timestamp',
                 postalcode : 'text',
                 placename : 'text',
                 state : 'text',
